@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2aea8e54-7433-4037-bf93-75398de0ec0d" name="Changes" comment="spring demo">
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/song/atguigu/bean/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/song/atguigu/bean/impl/UserDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/song/atguigu/demo/TestUserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/ben.xml" afterDir="false" />
+    <list default="true" id="2aea8e54-7433-4037-bf93-75398de0ec0d" name="Changes" comment="111">
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/song/atguigu/bean/di/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/java/com/song/atguigu/demo/TestBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-ioc-xml/src/main/resources/ben-di.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,13 +19,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="spring-beans.schema" />
         <option value="Class" />
+        <option value="spring-beans.schema" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -38,9 +40,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2ilwyjRLPKnhijq9UluO6cUztOp" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
@@ -49,11 +51,14 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.TestUserDao.executor": "Run",
+    "JUnit.TestBook.testSetter.executor": "Run",
+    "JUnit.TestBook.testconstructor.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "UAT",
     "jdk.selected.JAVA_MODULE": "22",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/project/spring6",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,7 +72,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project\spring6" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TestBook.testconstructor">
     <configuration name="TestUserDao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.song.atguigu.demo.TestUserDao" />
       <module name="spring6-ioc-xml" />
@@ -81,8 +91,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestBook.testSetter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring6-ioc-xml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.song.atguigu.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.song.atguigu.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.song.atguigu.demo.TestBook" />
+      <option name="METHOD_NAME" value="testSetter" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestBook.testconstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring6-ioc-xml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.song.atguigu.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.song.atguigu.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.song.atguigu.demo.TestBook" />
+      <option name="METHOD_NAME" value="testconstructor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestBook.testconstructor" />
+        <item itemvalue="JUnit.TestBook.testSetter" />
         <item itemvalue="Application.TestUserDao" />
       </list>
     </recent_temporary>
@@ -120,16 +164,32 @@
       <option name="project" value="LOCAL" />
       <updated>1720081404017</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="111">
+      <option name="closed" value="true" />
+      <created>1720094398753</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1720094398753</updated>
+    </task>
+    <task id="LOCAL-00004" summary="111">
+      <option name="closed" value="true" />
+      <created>1720094402688</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720094402688</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="111" />
     <MESSAGE value="spring demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="spring demo" />
+    <MESSAGE value="111" />
+    <option name="LAST_COMMIT_MESSAGE" value="111" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
