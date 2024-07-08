@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring6-ioc-xml</module>
+        <module>spring6-reflect</module>
     </modules>
 
     <properties>
