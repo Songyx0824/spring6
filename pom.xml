@@ -12,6 +12,7 @@
         <module>spring6-ioc-xml</module>
         <module>spring6-reflect</module>
         <module>spring6-ioc-bean</module>
+        <module>spring6-aop</module>
     </modules>
 
     <properties>
