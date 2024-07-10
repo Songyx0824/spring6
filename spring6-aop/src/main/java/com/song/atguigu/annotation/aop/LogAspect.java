@@ -24,7 +24,7 @@ public class LogAspect {
     }
 
     // 后置 @After()
-    @After(value = "execution( * com.song.atguigu.annotation.Calculator.*(..))")
+    @After(value = "pointCut()")
     public void afterMethod(JoinPoint joinPoint){
         String methodName = joinPoint.getSignature().getName();
         System.out.println("logger--> 后置通知, 方法名称: "+ methodName);
@@ -67,6 +67,9 @@ public class LogAspect {
         return result;
     }
 
+    //重用切入点表达式
+    @Pointcut(value = "execution( * com.song.atguigu.annotation.Calculator.*(..))")
+    public void pointCut(){}
 
 
 }
