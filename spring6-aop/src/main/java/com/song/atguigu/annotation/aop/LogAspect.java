@@ -2,6 +2,7 @@ package com.song.atguigu.annotation.aop;
 
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
@@ -46,11 +47,24 @@ public class LogAspect {
 
     // 环绕 @Around()
     @Around(value = "execution( * com.song.atguigu.annotation.Calculator.*(..))")
-    public void AroundMethod(JoinPoint joinPoint){
+    public Object AroundMethod(ProceedingJoinPoint joinPoint){
         String methodName = joinPoint.getSignature().getName();
         Object[] args = joinPoint.getArgs();
         String argString = Arrays.toString(args);
-        System.out.println("logger--> 返回通知, 方法名称: "+ methodName );
+        Object result = null;
+        try {
+            System.out.println("环绕通知====目标方法执行");
+
+            result = joinPoint.proceed();
+
+            System.out.println("环绕通知====目标方法返回值之后");
+        }catch (Throwable throwable){
+            throwable.printStackTrace();
+            System.out.println("环绕通知====目标方法出现异常执行");
+        }finally {
+            System.out.println("环绕通知====目标方法执行完毕");
+        }
+        return result;
     }
 
 
